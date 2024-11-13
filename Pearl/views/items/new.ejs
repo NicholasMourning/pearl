@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs')%>
+    <!--Main-->
+    <main class="new-item-main">
+        <div class="new-item-container">
+        <div class="new-item-about">
+            <h1>SELL AT PEARL</h1>
+            <p>Fill out the form with some of your clothes and snap a picture and your post will be created!</p>
+        </div>
+        <form method= "POST" action="/items" enctype="multipart/form-data">
+            <div>
+                <select id="condition" name="condition" required>
+                    <option value="">Condition</option>
+                    <option value="Used - good condition">
+                        Used - good condition
+                    </option>
+                    <option value="Used - like new">
+                        Used - like new
+                    </option>
+                    <option value="Refurbished">
+                        Refurbished
+                    </option>
+                    <option value="New - without tags">
+                        New - without tags
+                    </option>
+                    <option value="New - with tags">
+                        New - with tags
+                    </option>
+                </select>
+            </div>
+            <div>
+                <input type="text" name="title" placeholder="Title" required>
+            </div>
+            <div>
+                <input type="text" name="seller" placeholder="Seller Name" required>    
+            </div>
+            <div>
+                <input type="number" name="price" placeholder="Price" required>  
+            </div>
+            <div>
+                <input type="text" name="details" placeholder="Details" required> 
+            </div>
+            <div class="image">
+            <label>Image</label>
+            <input type="file" name="image" required> 
+            </div>
+            <button type="submit">
+                Sell
+            </button>
+        </form>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>

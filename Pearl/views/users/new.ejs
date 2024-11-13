@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs')%>
+    <!--Main-->
+    <main class="new-user-main">
+        <div class="new-user-container">
+        <div class="new-user-about">
+            <h1>Sign up</h1>
+            <h2>Join the Pearl Experience</h2>
+        </div>
+        <form method= "POST" action="/users" enctype="multipart/form-data">
+            <div>
+                <input type="text" name="firstName" placeholder="First Name" required>
+            </div>
+            <div>
+                <input type="text" name="LastName" placeholder="Last Name" required>    
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Email" required>  
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password" required> 
+            </div>
+            <button type="submit">
+                Sign up
+            </button>
+        </form>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>
