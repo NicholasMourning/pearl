@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs')%>
+    <!--Main-->
+    <main class="item-details-main">
+        <div class="item-details">
+            <img id= 'shirt' src="<%=item.image%>" alt="<%=item.title%>">
+            <div class="item-details-content">
+                    <h2><%=item.title%></h2>
+                    <h3>Condition: <%=item.condition%></h3>
+                    <h3>Price: $<%=item.price%> | 0 offers</h3>
+                    <h4>Seller: <%=item.seller.firstName + ' ' + item.seller.lastName%></h4>
+                    <p><%=item.details%></p>
+                    <%if(user == item.seller.id){%>
+                        <form>
+                            <button type="submit" formmethod="GET" formaction="/items/<%=item.id%>/edit">Edit</button>
+                            <button type="submit" formmethod="POST" formaction="/items/<%=item.id%>?_method=DELETE">Delete</button>
+                        </form>
+                    <%}%>
+
+
+                </div>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>

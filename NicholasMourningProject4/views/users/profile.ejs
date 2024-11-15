@@ -1,0 +1,44 @@
+<%- include('../partials/header.ejs') %>
+    <main class="profile-main">
+        <div class="container">
+            <h1>
+                <%= user.firstName %>'s Listings
+            </h1>
+            <% if (items.length) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% items.forEach(item=> { %>
+                            <tr>
+                                <td><a href="/items/<%= item.id %>">
+                                        <%= item.title %>
+                                    </a></td>
+                                <td>
+                                    <p>
+                                        <% if (item.active) { %>active<% } else { %>not active<% } %>
+                                    </p>
+                                </td>
+                                <td>
+                                    <form>
+                                        <button class="edit" type="submit" formmethod="GET"
+                                            formaction="/items/<%=item.id%>/edit">Edit</button>
+                                        <button class="delete" type="submit" formmethod="POST"
+                                            formaction="/items/<%=item.id%>?_method=DELETE">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+                <% } else { %>
+                    <h3>There are no items in your listing</h3>
+                    <% } %>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
