@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl</title>
+    <link rel="stylesheet" href="/css/pearl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <nav>
+            <div class="divnav">
+                <a href="/"><img id="logo" src="/images/pearlLogo.jpeg" alt="logo" ></a> 
+                <form method="GET" action="/items/search" class="search-bar">
+                    <input type="text" name='s' placeholder="Search..." required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul>
+                    <li><a href="/items">Browse</a></li>
+                    <li><a href="/items/new">Sell</a></li>  
+
+                    <%if(!user){ %>
+                        <li><a href="/users/login"><button> Login <i class="fa-solid fa-user"></i></button></a></li>
+                        <li><a href="/users/new"><button> Sign Up <i class="fa-solid fa-circle-up"></i></button></a></li>
+                    <%} %>
+                    <%if(user){ %>
+                        <li><a href="/users/profile">Profile Page</a></li>
+                        <li><a href="/users/logout"><button> Logout <i class="fa-solid fa-right-to-bracket"></i></button></a></li>
+                        <%}%>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <% if(errorMessages.length > 0) {%>
+        <% errorMessages.forEach(message=>{%>
+            <div class='error'>
+                <%=message%>
+            </div>
+            <%});%>
+                <%}%>
+    
+                    <% if(successMessages.length > 0) {%>
+    
+                        <% successMessages.forEach(message=>{%>
+                            <div class='success'>
+                                <%=message%>
+                            </div>
+                            <%});%>
+                                <%}%>

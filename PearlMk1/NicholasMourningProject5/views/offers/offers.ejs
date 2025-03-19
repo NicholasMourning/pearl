@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs') %>
+    <main class="profile-main">
+        <div class="container">
+            <h1>
+                Offers received for <%= item.title %>
+            </h1>
+            <% if (offers.length) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Buyer</th>
+                            <th>Amount</th>
+                            <%if (item.active){ %>
+                                <th> Action</th>
+                                <%} else{%>
+                                <th>Status</th>
+                                <%}%>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% offers.forEach(offer=> { %>
+                            <tr>
+                                <td>
+                                    <%= offer.user.firstName %>
+                                  </td>
+                                <td>
+                                    <p>
+                                        $<%= offer.amount %>
+                                    </p>
+                                </td>
+                                <td>
+                                    <%if (item.active){ %>
+                                        <form method="POST" action="/items/<%= item._id %>/offers/<%= offer._id %>/accept">
+                                             <button class="edit" type="submit">Accept</button> 
+                                            </form>
+                                            <%} else{%>
+                                               <%= offer.status %> 
+                                                <%}%>
+                                        </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+                <% } else { %>
+                    <h3>There are no Offers for this item</h3>
+                    <% } %>
+        </div>
+        <%- include('../partials/footer.ejs') %>
