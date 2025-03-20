@@ -3,7 +3,7 @@
 A fully responsive online clothing marketplace that enables users to seamlessly browse, buy, and sell items.
 
 ## Installation
-1. Clone the repo: `git clone https://github.com/yourusername/pearl-marketplace.git`
+1. Clone the repo: `https://github.com/NicholasMourning/pearl.git`
 2. Navigate to the project folder: `cd pearl-marketplace`
 3. Install dependencies: `npm install`
 4. Set up your environment variables (e.g., MongoDB URI, AWS credentials).
