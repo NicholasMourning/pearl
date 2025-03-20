@@ -9,7 +9,7 @@ A fully responsive online clothing marketplace that enables users to seamlessly 
 4. Set up your environment variables (e.g., MongoDB URI, AWS credentials).
 
 ## Usage
-- Run the project locally: `npm start`
+- Run the project locally: `nodemon app`
 - Open your browser at `http://localhost:3000`
 
 ## Features
