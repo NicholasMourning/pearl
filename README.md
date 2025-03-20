@@ -32,24 +32,22 @@ A fully responsive online clothing marketplace that enables users to seamlessly 
 ## Program User Interface
 
 Landing Page
-
 ![image](https://github.com/user-attachments/assets/eedb1871-0f6c-4ad4-894e-70efd38603f4)
 
 Login Page
-
 ![image](https://github.com/user-attachments/assets/d7123198-6328-4a26-af06-f85343b55b26)
 
 Sign Up Page
-
 ![image](https://github.com/user-attachments/assets/9d8e8a6a-c449-4afe-9341-207067097aca)
 
 Profile Page
-
 ![image](https://github.com/user-attachments/assets/ee4b87b1-da3b-48e1-b005-56eff857c3da)
 
 
 Market-Place
+![image](https://github.com/user-attachments/assets/4c18a521-233b-4fe3-9924-2580c623ce86)
 
 
 Sell Functionally
+![image](https://github.com/user-attachments/assets/4f8117d6-3696-4c32-8adb-2bf4b196efdf)
 
