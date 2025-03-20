@@ -33,11 +33,23 @@ A fully responsive online clothing marketplace that enables users to seamlessly 
 
 Home Page
 
+![image](https://github.com/user-attachments/assets/eedb1871-0f6c-4ad4-894e-70efd38603f4)
+
 Login
 
-Security Functionally
+![image](https://github.com/user-attachments/assets/d7123198-6328-4a26-af06-f85343b55b26)
+
+Sign Up
+
+![image](https://github.com/user-attachments/assets/9d8e8a6a-c449-4afe-9341-207067097aca)
+
+Profile Page
+
+![image](https://github.com/user-attachments/assets/ee4b87b1-da3b-48e1-b005-56eff857c3da)
+
 
 Market-Place
+
 
 Sell Functionally
 
