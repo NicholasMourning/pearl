@@ -31,15 +31,15 @@ A fully responsive online clothing marketplace that enables users to seamlessly 
 
 ## Program User Interface
 
-Home Page
+Landing Page
 
 ![image](https://github.com/user-attachments/assets/eedb1871-0f6c-4ad4-894e-70efd38603f4)
 
-Login
+Login Page
 
 ![image](https://github.com/user-attachments/assets/d7123198-6328-4a26-af06-f85343b55b26)
 
-Sign Up
+Sign Up Page
 
 ![image](https://github.com/user-attachments/assets/9d8e8a6a-c449-4afe-9341-207067097aca)
 
