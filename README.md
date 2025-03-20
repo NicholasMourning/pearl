@@ -29,7 +29,7 @@ A fully responsive online clothing marketplace that enables users to seamlessly 
 - Follows the Model-View-Controller (MVC) pattern for clear separation of concerns.
 - Code organized for scalability and maintainability.
 
-## Program walk-through
+## Program User Interface
 
 Home Page
 
