@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs')%>
+    <!--Main-->
+    <main class="item-main">   
+        <div class="item-container">
+            <%if(items.length){ %>
+                <% items.forEach(item =>{ %>
+                    <a href="/items/<%= item.id%>">
+                        <div class="item">
+                            <img src="<%=item.image%>" alt="<%=item.title%>">
+                            <div class="item-content">
+                                <h3><%=item.title%></h3>
+                                <h4> $<%=item.price%> | <%=item.totalOffers%> offer</h4>
+                                <p><%=item.details%></p>
+                            </div>
+                        </div>
+                    </a>
+                <%});%>
+            <%} else {%>
+                <p>No items can be found</p>
+            <%}%>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>

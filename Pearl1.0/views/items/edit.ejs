@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs')%>
+<main class="new-item-main"></main>
+        <div class="new-item-container">
+        <div class="new-item-about">
+            <h1>Edit an Item</h1>
+            <p>Change the information</p>
+        </div>
+        <form  method = "POST" action = "/items/<%= item.id%>?_method=PUT" enctype="multipart/form-data">
+            <div>
+                <select id="condition" name="condition" required>
+                    <option><%=item.condition%></option>
+                    <option value="Used - good condition">
+                        Used - good condition
+                    </option>
+                    <option value="Used - like new">
+                        Used - like new
+                    </option>
+                    <option value="Refurbished">
+                        Refurbished
+                    </option>
+                    <option value="New - without tags">
+                        New - without tags
+                    </option>
+                    <option value="New - with tags">
+                        New - with tags
+                    </option>
+                </select>
+            </div>
+            <div>
+                <input type="text" name="title" placeholder="Title" value = "<%= item.title%>" required>
+            </div>
+            <div>
+                <input type="number" name="price" placeholder="Price" value = "<%= item.price%>" required>  
+            </div>
+            <div>
+                <input type="text" name="details" placeholder="Details" value = "<%= item.details%>" required> 
+            </div>
+            <div class="image">
+            <label>Image</label>
+            <input type="file" name='image'> 
+            </div>
+            <button type="submit">
+                Submit edit
+            </button>
+        </form>
+        </div>
+    </main>
+<%- include('../partials/footer.ejs')%>
